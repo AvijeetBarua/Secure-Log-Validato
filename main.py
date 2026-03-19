@@ -34,7 +34,7 @@ def email(g):
 
 
 def time(t):
-    t= re.search(r"^(\d{1,2})(?:\:?(\d{2}))?\s(AM|PM)\s?to\s?(\d{1,2})(?:\:?(\d{2}))?\s(AM|PM)$")
+    t= re.search(r"^(\d{1,2})(?:\:?(\d{2}))?\s(AM|PM)\s?to\s?(\d{1,2})(?:\:?(\d{2}))?\s(AM|PM)$",t)
     if t:
         h,h1 = int(t.group(1)), int(t.group(4))
         m,m1 = int(t.group(2) or 0), int(t.group(5) or 0)
